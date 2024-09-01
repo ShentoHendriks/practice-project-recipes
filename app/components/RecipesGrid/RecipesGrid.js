@@ -1,11 +1,20 @@
-export default function RecipesGrid() {
+export default async function RecipesGrid() {
+  let data = await fetch(
+    "https://recepten-backend.shentostaging.nl/items/recepten"
+  );
+  let recepten = await data.json();
+
   return (
     <>
-      <h2>Nieuwste Recepten</h2>
+      <h2 className="text-2xl mt-8 mb-4">Nieuwste Recepten</h2>
       <section className="grid grid-cols-3">
-        <div>Recept 1</div>
-        <div>Recept 2</div>
-        <div>Recept 3</div>
+        {recepten.data.map((recept) => {
+          return (
+            <div className="aspect-square bg-gray-500 text-white p-8" key={recept.id}>
+              <h3 className="text-2xl font-bold">{recept.name}</h3>
+            </div>
+          );
+        })}
       </section>
     </>
   );
