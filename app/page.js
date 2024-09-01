@@ -1,8 +1,14 @@
 export default function Home() {
   return (
-    <>
-      <h1 className="text-4xl font-bold tracking-tighter container p-8">Hello Welcome to my beautiful app</h1>
-      <p className="container">this is a test</p>
-    </>
+    <main className="container pt-8 prose">
+      <h1 className="text-4xl">Recepten van Shento Hendriks en Marieke Venderbosch</h1>
+      <p className="">Op deze website worden er allemaal recepten geplaatst van Shento.</p>
+      <h2>Nieuwste Recepten</h2>
+      <section className="grid grid-cols-3">
+        <div>Recept 1</div>
+        <div>Recept 2</div>
+        <div>Recept 3</div>
+      </section>
+    </main>
   );
 }
