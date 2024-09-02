@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <>
       <header className="flex items-center w-full justify-center gap-4 px-8 py-8 bg-black text-white fixed z-50">
-        <Link href="/" className="text-6xl font-serif">
+        <Link href="/" className="text-xl lg:text-4xl font-serif">
           Recepten Website
         </Link>
       </header>

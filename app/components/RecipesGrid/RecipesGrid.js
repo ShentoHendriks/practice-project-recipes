@@ -12,7 +12,7 @@ export default async function RecipesGrid() {
   return (
     <>
       <h2 className="text-2xl mt-8 mb-4">Nieuwste Recepten</h2>
-      <section className="grid grid-cols-3 gap-4">
+      <section className="grid grid-cols-2 md:grid-cols-3 gap-4">
         {recepten.data.map((recept) => {
           return (
             <Link
